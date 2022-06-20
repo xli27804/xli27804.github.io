@@ -33,13 +33,21 @@
         <!-- Place your demo code here -->
         <code class="shell-session demo">
           SELECT 
-          x.myName          
+          x.myName
+          , x.email
+          , x.tel
+          , x.location
+          , z.age
           , CASE WHEN y.Department = 'IT' OR 'SQL' THEN 0 ELSE 1 END     AS DepartmentCode;          
           FROM dbo.Frank_Database AS X
 
           INNER JOIN dbo.YourcompanyDatabase AS Y
           ON X.id = Y.id
-                    
+          
+          CROSS APPLY(
+              da.dbo.getAge(startdate)    as Age
+          ) as z
+          
           WHERE 
           myName = 'Frank Li'
           AND Email IN ('ip114@msn.com')

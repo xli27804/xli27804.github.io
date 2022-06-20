@@ -133,7 +133,7 @@ nav {
 }
 
 .changelog__item {
-  display: flex;
+  display: grid;
 }
 
 .changelog__meta {

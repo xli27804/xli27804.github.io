@@ -39,13 +39,14 @@
           , x.location
           , z.age
           , CASE WHEN y.Department = 'IT' OR 'SQL' THEN 0 ELSE 1 END     AS DepartmentCode;          
+          
           FROM dbo.Frank_Database AS X
 
           INNER JOIN dbo.YourcompanyDatabase AS Y
           ON X.id = Y.id
           
           CROSS APPLY(
-              da.dbo.getAge(startdate)    as Age
+                      da.dbo.getAge(startdate)    as Age
           ) as z
           
           WHERE 

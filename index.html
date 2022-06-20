@@ -12,32 +12,40 @@
       <link rel="stylesheet" href="scribbler-landing.css">
       <link rel="author" href="humans.txt">
   </head>
+
   <body>
     <nav>
       <div class="logo"></div>
       <ul class="menu">
         <div class="menu__item toggle"><span></span></div>
-
-        <li class="menu__item"><a href="xli27804.github.io" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item">
+          <a href="xli27804.github.io" class="link link--dark">
+            <i class="fa fa-github"></i> Github</a>
+        </li>
       </ul>
     </nav>
     <div class="hero">
-      <h1 class="hero__title">I'm an advised SQL Developer</h1>
-      <p class="hero__description">More than 10 years work experiences in SQL World.</p>
+      <h1 class="hero__title">I'm an advanced SQL Developer</h1>
+      <p class="hero__description">I have more than 10 years work experiences in SQL World.</p>
     </div>
     <div class="hero__terminal">
       <pre>
         <!-- Place your demo code here -->
         <code class="shell-session demo">
           SELECT 
-          x.Name          
+          x.myName          
           , CASE WHEN x.Department = 'IT' THEN 0 ELSE 1 END     AS DepartmentCode;          
           FROM dbo.Frank_Database AS X
 
           INNER JOIN dbo.YourcompanyDatabase AS Y
           ON X.id = Y.id
                     
-          WHERE Name = 'Frank'
+          WHERE 
+          myName = 'Frank Li'
+          AND Email IN ('ip114@msn.com')
+          AND tel = '(252) 452 8741'
+          AND Location LIKE 'Rocky Mount%'
+
           ORDER BY Y.Name
            ~ $ </code>
           
@@ -45,7 +53,7 @@
     </div>
     <div class="wrapper">
       <div class="installation">
-        <h3 class="section__title">Code Examples</h3>
+        <h3 class="section__title">Key Skills</h3>
         <div class="tab__container">
           <ul class="tab__menu">
             <li class="tab active" data-tab="mac">SQL</li>
@@ -73,8 +81,6 @@
                 Next <br>
                   Call MergeFileAndReName <br>
               END SUB
-
-
             </code>
           </pre>
         </div>
@@ -118,16 +124,17 @@
           </p>
         </div>
       </div>
-
     </div>
 
     <div class="changelog">
       <div class="wrapper">
-        <h3 class="section__title">Resume Summary</h3>
+        <h3 class="section__title">Resume Highlight</h3>
+
+        <!--Kirkless college-->
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.50</h4>
-            <small class="changelog__date">01/2022</small>
+            <h4 class="changelog__title">v0.3</h4>
+            <small class="changelog__date">01/2022 to 06/2022</small>
           </div>
           <div class="changelog__detail">
             <ul>
@@ -138,23 +145,28 @@
             </ul>
           </div>
         </div>
-        <div class="changelog__item">
+    <!-- Thomas Broadbent -->      
+      <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.06</h4>
-            <small class="changelog__date">05/2016</small>
+            <h4 class="changelog__title">v0.2</h4>
+            <small class="changelog__date">05/2016 to 12/2021</small>
           </div>
           <div class="changelog__detail">
             <ul>
-              <li>Maintain accurate system data such as demand history and generate of statistical forecast.</li>
-              <li>Design and construct reports (SSRS) using ERP system data, develop details process flow diagrams and supporting documentation.</li>
-              <li>Export BOM from ERP, using VBA quickly sort and generate a cost report for other team.</li>
+              <li>Maintain accurate system data such as demand history and generate of statistical forecast. </li>
+              <li>Design and construct reports (SSRS) using ERP system data, develop details process flow gisgrams and supporting documentation.</li>
+              <li>Query BOM Data from ERP system using VBA of SQL sort and generate a cost report for other team.</li>
+              <li>Developd a QA system to manage supplier's ISO Certifications.</li>
             </ul>
           </div>
-        </div>
+        </div>         
+
+
+        <!--Cummins-->
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.00</h4>
-            <small class="changelog__date">11/2011</small>
+            <h4 class="changelog__title">v0.1</h4>
+            <small class="changelog__date">11/2011 to 04/2012</small>
           </div>
           <div class="changelog__detail">
             <ul>
@@ -163,11 +175,16 @@
             </ul>
           </div>
         </div>
+          
         <div class="changelog__callout">
-          <a href="#" class="button--secondary">Checkout My Full Resume</a>
+          <a href="#" class="button--secondary">Email me if you would need my Full Resume</a>
         </div>
+
       </div>
-    </div>
+    </div> <!--the end of resume-->
+
+    <!--contact form-->
+
 
     <footer class="footer">Thanks for visiting my resume github page. <a href="https://xli27804.github.io" target="_blank" class="link link--light">Frank's Github Page</a>.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>

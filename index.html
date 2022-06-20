@@ -26,7 +26,7 @@
     </nav>
     <div class="hero">
       <h1 class="hero__title">I'm an advanced SQL Developer, looking for a job near Rocky Mount NC</h1>
-      <p class="hero__description">I have more than 10 years work experiences in SQL World.</p>
+      <p class="hero__description">I have more than 10 years work experiences in SQL World, my contact information in the code below.</p>
     </div>
     <div class="hero__terminal">
       <pre>
@@ -34,7 +34,7 @@
         <code class="shell-session demo">
           SELECT 
           x.myName          
-          , CASE WHEN x.Department = 'IT' THEN 0 ELSE 1 END     AS DepartmentCode;          
+          , CASE WHEN y.Department = 'IT' OR 'SQL' THEN 0 ELSE 1 END     AS DepartmentCode;          
           FROM dbo.Frank_Database AS X
 
           INNER JOIN dbo.YourcompanyDatabase AS Y

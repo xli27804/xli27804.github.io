@@ -25,30 +25,21 @@
       </ul>
     </nav>
     <div class="hero">
-      <h1 class="hero__title">I'm an advanced SQL Developer, looking for a job near Rocky Mount NC</h1>
-      <p class="hero__description">I have more than 10 years work experiences in SQL World, my contact information in the code below.</p>
+      <h1 class="hero__title">I'm an advanced SQL Developer, my hobbit is coding...</h1>
+      <p class="hero__description">I have more than 10 years work experiences in SQL World.</p>
     </div>
     <div class="hero__terminal">
       <pre>
         <!-- Place your demo code here -->
-        <code class="shell-session demo">
+        <code class="shell-session demo"> $ updated 06-20-2022
           SELECT 
-          x.myName
-          , x.email
-          , x.tel
-          , x.location
-          , z.age
-          , CASE WHEN y.Department = 'IT' OR 'SQL' THEN 0 ELSE 1 END     AS DepartmentCode;          
-          
+          x.myName          
+          , CASE WHEN x.Department = 'IT' THEN 0 ELSE 1 END     AS DepartmentCode;          
           FROM dbo.Frank_Database AS X
 
           INNER JOIN dbo.YourcompanyDatabase AS Y
           ON X.id = Y.id
-          
-          CROSS APPLY(
-                      da.dbo.getAge(startdate)    as Age
-          ) as z
-          
+                    
           WHERE 
           myName = 'Frank Li'
           AND Email IN ('ip114@msn.com')
@@ -56,18 +47,20 @@
           AND Location LIKE 'Rocky Mount%'
 
           ORDER BY Y.Name
+          
            ~ $ </code>
           
       </pre>
     </div>
     <div class="wrapper">
       <div class="installation">
-        <h3 class="section__title">Key Skills</h3>
+        <h3 class="section__title">MY KEY SKILLS</h3>
         <div class="tab__container">
           <ul class="tab__menu">
             <li class="tab active" data-tab="mac">SQL</li>
             <li class="tab" data-tab="linux">SSRS</li>
             <li class="tab" data-tab="win">Excel VBA</li>
+            <li class="tab" data-tab="python">Python</li>
           </ul>
           <pre class="nohighlight code">
             <code class="tab__pane active mac">$  CREATE PROCEDURE spGetEmployees <br>
@@ -91,6 +84,7 @@
                   Call MergeFileAndReName <br>
               END SUB
             </code>
+            <code class="tab__pane python">$ import pandas as pd</code>
           </pre>
         </div>
       </div>
@@ -104,7 +98,7 @@
           <p>Be able to create SSRS report and format it to a professional level.</p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">VBA</h3>
+          <h3 class="section__title">Excel VBA</h3>
           <p>Be able to develop EXCEL Add-On, functions using VBA tech. </p>
         </div>
         <div class="feature__item">
@@ -147,7 +141,7 @@
           </div>
           <div class="changelog__detail">
             <ul>
-              <li>Develop SQL query for funding department, for annual planning etc.</li>
+              <li>Develop SQL query for funding department, for annual business planning project etc.</li>
               <li>To provide a report (SSRS) writing service for MIS and other key departments.</li>
               <li>Ensure robustness and accuracy of curriculum data and reports.</li>
               <li>Support senior leaders and managers to maximise college income and achievement rates by ensuring the timely production, monitoring and analysis of management information.</li>
@@ -164,7 +158,7 @@
             <ul>
               <li>Maintain accurate system data such as demand history and generate of statistical forecast. </li>
               <li>Design and construct reports (SSRS) using ERP system data, develop details process flow gisgrams and supporting documentation.</li>
-              <li>Query BOM Data from ERP system using VBA of SQL sort and generate a cost report for other team.</li>
+              <li>Query BOM Data from ERP system using VBA, SQL generate a cost SSRS report for other team.</li>
               <li>Developd a QA system to manage supplier's ISO Certifications.</li>
             </ul>
           </div>
@@ -186,7 +180,7 @@
         </div>
           
         <div class="changelog__callout">
-          <a href="#" class="button--secondary">Email me if you would need my Full Resume</a>
+          <a href="mailto:ip114@msn.com?subject=Request your CV from Github" class="button--secondary">Email me if you would need my Full Resume</a>
         </div>
 
       </div>

@@ -20,7 +20,7 @@ if (document.getElementsByClassName('demo').length > 0) {
             - Supply Chain --- SQL, SSRS report, Thomas Broadbent & Son's UK
             - Business Analyst --- Power BI report, Cummins Turbo Technologies UK
             - Marketing department --- VBA, Wuxi LittleSwan Washing Machine China  `;
-  var speed = 60;
+  var speed = 30;
 
   function typeItOut () {
     if (i < txt.length) {

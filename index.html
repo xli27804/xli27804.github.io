@@ -16,6 +16,7 @@
   <body>
     <nav>
       <div class="logo"></div>
+        
       <ul class="menu">
         <div class="menu__item toggle"><span></span></div>
         <li class="menu__item">
@@ -24,10 +25,29 @@
         </li>
       </ul>
     </nav>
-    <div class="hero">
+      
+      
+      
+    <div class="hero">        
+                  <!--avator photo-->
+        <div class="avator">    
+                <img class="avatar__image" src="image/lxf.png" alt="It's me.">
+
+        </div>
+        
+        
       <h1 class="hero__title">I'm an advanced SQL Developer, my hobbit is coding...</h1>
       <p class="hero__description">I have more than 10 years work experiences in SQL World.</p>
+        
+        <p  class="job_desciption">
+        10+ years of experience as a SQL Developer or similar role. <br>
+            I will be able to develop, implement ETL processes and optimize stored procedures and functions using MS-SQL. <br>
+            Good time-management skills, provide timely scheduled management reportings.<br>
+        Excellent understanding of Microsoft SQL Server and good knowledge of HTML and JavaScript.
+      </p>
+        
     </div>
+
     <div class="hero__terminal">
       <pre>
         <!-- Place your demo code here -->
@@ -91,7 +111,15 @@
       <div class="feature">
         <div class="feature__item">
           <h3 class="section__title">SQL</h3>
-          <p>I'm be able to create advanced queries, create function and stored precedures etc.,</p>
+          <p>I'm be able to create advanced queries from database, create function and stored precedures etc.,<br>
+          such as <br> 
+              DML (SELCT, INSERT, UPDATE etc., <br>
+              DDL(CREATE, ALTER, DROP, TRUNCATE), <br>
+              DCL (GRANT, REVOKE) and <br>
+              TCL (COMMIT, ROLLBACK, SAVEPOINT, ) statements.<br>
+            
+            
+            </p>
         </div>
         <div class="feature__item">
           <h3 class="section__title">SSRS</h3>
@@ -110,20 +138,29 @@
         <div class="feature__item">
           <h3 class="section__title">html, CSS</h3>
           <p>
-            Be able to create html and CSS such as this page I've done.
-            body { color: purple }
-            body { background-color: #d8da3d }
+            Be able to create html and CSS such as this page I've done.<br>
+            <code_2>
+              body {<br>
+              &ensp;&ensp;padding: 0;<br>
+              &ensp;&ensp;margin: 0;<br>
+              &ensp;&ensp;font-family: 'Nunito Sans', sans-serif;<br>
+              &ensp;&ensp;background-color: white;<br>
+            }<br>
+                </code_2>
+              <!--&ensp; is two tab space-->
           </p>
         </div>
         <div class="feature__item">
           <h3 class="section__title">Javascript</h3>
           <p>
             Can develope Javascript code and debug etc.,
-            const a = ["a", "b", "c"];
-                a.forEach((element) => {
-                    console.log(element);
-                });
-            <span class="code code--inline">javascript.java</span> for your to test! 
+            <code>
+                const a = ["a", "b", "c"];<br>
+                a.forEach((element) => {<br>
+                    console.log(element);<br>
+                });<br>
+              </code>
+            
           </p>
         </div>
       </div>
@@ -189,7 +226,7 @@
     <!--contact form-->
 
 
-    <footer class="footer">Thanks for visiting my resume github page. <a href="https://xli27804.github.io" target="_blank" class="link link--light">Frank's Github Page</a>.</footer>
+    <footer class="footer">Thanks for visiting my resume ref_github page. <a href="https://xli27804.github.io" target="_blank" class="link link--light">Frank's Github Page</a>.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="scribbler.js"></script>

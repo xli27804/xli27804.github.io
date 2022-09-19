@@ -88,6 +88,10 @@ hr {
   display: block;
 }
 
+
+    
+}
+
 /* code */
 .code {
   border-radius: 3px;
@@ -97,6 +101,12 @@ hr {
   color: var(--primary-color-light);
 }
 
+.code_2 {
+    font-family : Space Mono, SFMono-Regular, Menlo,Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    background: var(--bg-color);
+    color: cadetblue
+    
+}
 .code--block {
   white-space: pre-line;
   padding: 0 1.5rem;
@@ -316,3 +326,33 @@ table td:first-child {
     transform: translate3d(0,0,0);
   }
 }
+
+.job_desciption {
+    
+    display: block;
+    font-family: Space Mono, SFMono-Regular, Menlo,Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    
+    text-align: center;
+    color: #A43D0C;
+    text-shadow: 2px 2px 3px rgba(164,61,12,0.46);
+    
+}
+
+
+.avatar {
+    /* Rounded border */
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}
+
+.avatar__image {
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Take full size */
+    height: 150px;
+    width: 150px;
+    position: flex;
+    display: inline-block
+                    }

@@ -351,8 +351,8 @@ table td:first-child {
     border-radius: 50%;
 
     /* Take full size */
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
     position: flex;
     display: inline-block
                     }

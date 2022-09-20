@@ -2,9 +2,9 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <meta name="description" content="This is the place where you'll get to know me. SQL Developer --- I have more than 10 years expericen in SQL, SSRS, Power BI world.">
+      <meta name="description" content="This is the place where you'll get to know me. SQL Developer --- I have more than 10 years experience in SQL, SSRS, Power BI world.">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>I'm a SQL Developer --- Frank's page</title>
+      <title>I'm a SQL Developer --- Frank's CV page</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
@@ -15,8 +15,7 @@
 
   <body>
     <nav>
-      <div class="logo"></div>
-        
+      <div class="logo"></div>        
       <ul class="menu">
         <div class="menu__item toggle"><span></span></div>
         <li class="menu__item">
@@ -24,8 +23,7 @@
             <i class="fa fa-github"></i> Github</a>
         </li>
       </ul>
-    </nav>
-      
+    </nav>     
       
       
     <div class="hero">        
@@ -37,13 +35,13 @@
         
         
       <h1 class="hero__title">I'm an advanced SQL Developer, my hobbit is coding...</h1>
-      <p class="hero__description">I have more than 10 years work experiences in SQL World.</p>
+      <p class="hero__description">I have more than 10+ years work experience in SQL World.</p>
         
         <p  class="job_desciption">
-        10+ years of experience as a SQL Developer or similar role. <br>
-            I will be able to develop, implement ETL processes and optimize stored procedures and functions using MS-SQL. <br>
-            Good time-management skills, provide timely scheduled management reportings.<br>
-        Excellent understanding of Microsoft SQL Server and good knowledge of HTML and JavaScript.
+        A) 10+ years of experience as a SQL Developer or similar role. <br>
+        B) I will be able to develop, implement ETLs processes and optimize stored procedures and functions using SQL. <br>
+        C) Good time-management skills, provide timely scheduled management (SSRS) reportings.<br>
+        D) Excellent understanding of Microsoft SQL Server and good knowledge of HTML and JavaScript.
       </p>
         
     </div>
@@ -77,13 +75,13 @@
         <h3 class="section__title">MY KEY SKILLS</h3>
         <div class="tab__container">
           <ul class="tab__menu">
-            <li class="tab active" data-tab="mac">SQL</li>
-            <li class="tab" data-tab="linux">SSRS</li>
-            <li class="tab" data-tab="win">Excel VBA</li>
-            <li class="tab" data-tab="python">Python</li>
+            <li class="tab active" data-tab="SQL">SQL</li>
+            <li class="tab" data-tab="SSRS">SSRS</li>
+            <li class="tab" data-tab="Excel_VBA">Excel VBA</li>
+            <li class="tab" data-tab="Python">Python</li>
           </ul>
           <pre class="nohighlight code">
-            <code class="tab__pane active mac">$  CREATE PROCEDURE spGetEmployees <br>
+            <code class="tab__pane active SQL">$  CREATE PROCEDURE spGetEmployees <br>
               -- WITH Encryption <br>
               AS<br>
               BEGIN <br>
@@ -91,8 +89,8 @@
                 ORDER BY NAME <br>
               END;
             </code>
-            <code class="tab__pane linux">$  =Code.ChangeWord(Fields!Category.Value)</code>
-            <code class="tab__pane win">$  
+            <code class="tab__pane SSRS">$  =Code.ChangeWord(Fields!Category.Value)</code>
+            <code class="tab__pane Excel_VBA">$  
               Sub choosefiles() <br>
                 Dim ws As Worksheet <br>
                 For Each ws In ActiveWorkbook.Worksheets <br>
@@ -104,7 +102,40 @@
                   Call MergeFileAndReName <br>
               END SUB
             </code>
-            <code class="tab__pane python">$ import pandas as pd</code>
+            <code class="tab__pane Python">$ import pandas as pd <br>
+              import requests <br>
+              from lxml import etree <br>
+              def get_data(year, month):<br>
+              <br>
+              try:<br>
+              &nbsp url = "https://secure.outokumpu.com/das/aaf/openReport3.aspx?format=tab&type=MAS&prodType=0&mode=default&lang=EN&cult=sv-SE&xz=0.cba9b1624e6e3&aafPeriod=" + str(
+              year) + str(month)<br>
+              &nbsp headers = {<br>
+                &nbsp 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'<br>
+                        }<br>
+                &nbsp        r = requests.get(url=url, headers=headers)<br>
+                &nbsp        tree = etree.HTML(r.text)<br>
+                &nbsp   month_ = tree.xpath('//tr[2]/td/text()')[0].replace("Monthly Alloy Surcharges\r\n ", "")<br>
+                &nbsp   update_date = tree.xpath('//tr[3]/td[3]/text()')[0].replace("Updated:", "")<br>
+                &nbsp   l304 = tree.xpath('//tr[16]/td[5]/text()')[0]<br>
+                &nbsp   l316 = tree.xpath('//tr[22]/td[5]/text()')[0]<br>
+                &nbsp   s2205 = tree.xpath('//tr[29]/td[5]/text()')[0]<br>
+                &nbsp   a825 = tree.xpath('//tr[31]/td[5]/text()')[0]<br>
+                &nbsp   dic = {<br>
+                  &nbsp &nbsp       'Month' : month_,<br>
+                  &nbsp &nbsp       'Updated date' : update_date,<br>
+                  &nbsp &nbsp       '304L' : l304,<br>
+                  &nbsp &nbsp       '316L' : l316,<br>
+                  &nbsp &nbsp       'S2205': s2205,<br>
+                  &nbsp &nbsp       'A825': a825<br>
+                  &nbsp &nbsp       }<br>
+                  &nbsp &nbsp        except:<br>
+                  &nbsp &nbsp       pass<br>
+                  &nbsp &nbsp       time.sleep(random.randint(1,2))<br>
+                  &nbsp &nbsp       print(f'{month} data has been done.')<br>
+                return dic<br>
+
+            </code>
           </pre>
         </div>
       </div>
@@ -132,7 +163,7 @@
         <div class="feature__item">
           <h3 class="section__title">Python</h3>
           <p>
-            Still in learning Python, be able to read CSV, cleaning data using Pandas, also be able to use BeautifulSoup and other libraries to scrip data from website etc., 
+            I'm still in learning Python, be able to dealing with CSV, cleaning data using Pandas, also be able to use BeautifulSoup, XPath, CSS Selector and other libraries to scrape data from website etc., 
           </p>
         </div>
         <div class="feature__item">
@@ -181,7 +212,7 @@
               <li>Develop SQL query for funding department, for annual business planning project etc.</li>
               <li>To provide a report (SSRS) writing service for MIS and other key departments.</li>
               <li>Ensure robustness and accuracy of curriculum data and reports.</li>
-              <li>Support senior leaders and managers to maximise college income and achievement rates by ensuring the timely production, monitoring and analysis of management information.</li>
+              <li>Support senior leaders and managers to maximise college income and achievement rates by ensuring the timely     production, monitoring and analysis of management information.</li>
             </ul>
           </div>
         </div>
@@ -221,11 +252,10 @@
         </div>
 
       </div>
-    </div> <!--the end of resume-->
+    </div> 
+    <!--the end of resume-->
 
     <!--contact form-->
-
-
     <footer class="footer">Thanks for visiting my resume ref_github page. <a href="https://xli27804.github.io" target="_blank" class="link link--light">Frank's Github Page</a>.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
